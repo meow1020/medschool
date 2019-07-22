@@ -297,12 +297,20 @@
     max-height: 90%;
 }
 
+#list-modal .close {
+    float: unset;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 3rem;
+}
+
 #list-modal .modal-body {
     padding: 1rem;
 }
 
 #list-modal .modal-body-wrapper {
-    padding: 2rem;
+    padding: 0 1rem 1rem;
 }
 
 #list-modal .modal-title {
@@ -312,6 +320,11 @@
 
 #list-modal .modal-title {
     padding: 2rem 0;
+}
+
+#list-modal .modal-content-wrapper {
+    max-height: calc(100vh - 170px);
+    overflow: scroll;
 }
 
 #list-modal .modal-description {

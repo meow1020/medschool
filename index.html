@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>講糖小學堂</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/rwd.css">
+</head>
+
+<body>
+    <div id="app">
+        <section id="section1" class="d-flex flex-column">
+            <!-- 標題 -->
+            <div class="container">
+                <div class="title d-flex justify-content-center">
+                    <div class="d-flex align-items-center">
+                        <img class="logo" src="./assets/img/logo.png" alt="Logo">
+                        <h1>講糖小學堂</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- video -->
+            <div id="video" class="d-flex flex-1 flex-column">
+                <div class="d-flex justify-content-center align-items-center flex-1">
+                    <h2 class="text-gray">全方面衛教工具 翻轉醫患溝通模式</h2>
+                </div>
+                <!-- <div class="d-flex justify-content-center position-relative video-wrapper"> -->
+                <div class="d-flex justify-content-center position-relative video-wrapper" v-if="isUnder768">
+                    <img class="w-100 video" src="./assets/img/video-phone.gif" alt="video">
+                    <img class="video-circle" src="./assets/img/video-bg.svg" alt="背景">
+
+                </div>
+                <div class="d-flex justify-content-center position-relative video-wrapper" v-else>
+                    <img class="w-100 video" src="./assets/img/video.gif" alt="video">
+                    <img class="video-circle" src="./assets/img/video-bg.svg" alt="背景">
+                    
+                </div>
+                <!-- </div> -->
+                <div class="d-flex justify-content-center align-items-center flex-1">
+                    <h3 class="text-gray">以深入淺出圖解糖尿病衛教知識，各大主題搭配糖友 <br>
+                        常見迷思問答，新手糖友也能輕易搞懂糖尿病！
+                    </h3>
+                </div>
+            </div>
+            <!-- 連結 -->
+            <div id="links">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <button class="link" onclick="jump('#section2')">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/link1.svg" alt="使用說明">
+                            <div class="d-flex flex-column text-center text-white ">
+                                <span>講糖小學堂</span>
+                                <span>使用說明</span>
+                            </div>
+                        </div>
+                    </button>
+                    <div class="line-separator bg-white"></div>
+                    <button class="link" onclick="jump('#section3')">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/link2.svg" alt="主題介紹">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>講糖小學堂</span>
+                                <span>主題介紹</span>
+                            </div>
+                        </div>
+                    </button>
+
+                </div>
+
+
+            </div>
+            <!-- 公司介紹 -->
+            <div id="about">
+                <div class="d-flex justify-content-center">
+                    <div class="d-flex flex-column text-center text-gray">
+                        <span>傳述國際有限公司</span>
+                        <span>台北市信義區基隆路一段420號3樓之3</span>
+                        <span>service@presenter.com.tw</span>
+                        <span>Copyright © Presenter Ltd.Co.2017</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section> <!-- section1 -->
+
+        <!-- section2 -->
+        <section id="section2" class="d-flex flex-column">
+            <!-- 標題 -->
+            <div class="container">
+                <div class="title1 d-flex flex-column">
+                    <h1>講糖小學堂</h1>
+                    <h2 class="text-gray">使用說明</h2>
+                </div>
+                <h3 class="text-gray">看看別人實地怎麼做，讓您的衛教工作更輕鬆，糖友吸收更快更落實。</h3>
+            </div>
+            <!-- 使用說明 -->
+            <div class="bg-blue flex-1 ">
+                <div class="steps container d-flex flex-column h-100">
+                    <div v-for="(step, index) in steps"
+                        class="step d-flex align-items-center justify-content-center flex-1"
+                        :class="((index + 1) % 2 === 1) ? 'flex-row' : 'flex-row-reverse'">
+
+                        <div class="step-img d-flex align-items-center h-100"
+                            :class="((index + 1) % 2 === 1) ? 'flex-row' : 'flex-row-reverse'">
+
+                            <span class="text-center">
+                                Step<br>{{ index + 1 }}
+                            </span>
+
+                            <div class="h-100 d-flex align-items-center img-wrapper">
+                                <img :src="'./assets/img/' + step.img" :alt="'step' + (index + 1)">
+                            </div>
+                        </div>
+
+                        <p class="text-gray">{{ step.text }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- back to top -->
+            <div class="back d-flex justify-content-center align-items-center">
+                <button class="btn btn-back" onclick="jump('#section1')">回到頂部</button>
+            </div>
+
+
+        </section> <!-- section2 -->
+
+        <section id="section3" class="d-flex flex-column">
+            <!-- 標題 -->
+            <div class="container">
+                <div class="title1 d-flex flex-column">
+                    <h1>講糖小學堂</h1>
+                    <h2 class="text-gray">主題介紹</h2>
+                </div>
+            </div>
+
+            <div v-if="isUnder1024" class="flex-1">
+                <!-- 1024 theme2 -->
+                <div class="container">
+                    <div class="grid-container h-100">
+                        <div v-for="(list, index) in lists"
+                            class="grid-item bg-blue text-gray d-flex justify-content-center align-items-center"
+                            @click="showModal(index)">
+                            <span class="text-center" v-html="list.textHtml"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 下方theme1 -->
+            <div v-else class="theme1 flex-1">
+                <div class="container h-100 d-flex">
+                    <!-- left list -->
+                    <div class="list text-gray">
+                        <ol class="d-flex flex-column h-100">
+                            <li v-for="(list, index) in lists" class="flex-1 d-flex align-items-center">
+                                <div class="list-item" v-bind:class="{ selected: showListIndex === index }"
+                                    @mouseover="showListIndex = index">
+                                    <span>{{ list.text }}</span>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- right content -->
+                    <section v-for="(list, i) in lists" :key="i" v-if="i === showListIndex"
+                        class="d-flex flex-column justify-content-around align-content-center h-100 flex-1">
+                        <!-- theme title -->
+                        <div class="theme-title d-flex justify-content-center">
+                            <span>{{ list.content.title }}</span>
+                        </div>
+                        <div class="flex-1 img-club d-flex">
+                            <div class="b-img-wrapper h-100 flex-1 d-flex align-content-center">
+                                <!-- b-img -->
+                                <img class="b-img" v-bind:src="'./assets/img/' + list.content.mainImg"
+                                    alt="'大圖'+ (i + 1)">
+                            </div>
+                            <!-- listPoint + s-img -->
+                            <div class="right-side flex-2 d-flex flex-column justify-content-center">
+                                <!-- listPoint -->
+                                <div class="d-flex align-items-center list-circle flex-1">
+                                    <ul>
+                                        <li v-for="listPoint in list.content.listPoints" class="list-point text-gray">
+                                            {{ listPoint }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- s-img -->
+                                <div class="flex-1 d-flex imgs">
+                                    <div v-for="(subImg, j) in list.content.subImgs" :key="j" class="s-img">
+                                        <div class="w-100">
+                                            <img v-bind:src="'./assets/img/' + subImg"
+                                                v-bind:alt="'小圖' + (i + 1) + '-' + (j + 1)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- back to top -->
+            <div class="back bg-blue d-flex justify-content-center align-items-center">
+                <button class="btn btn-back" onclick="jump('#section1')">回到頂部</button>
+            </div>
+
+            <div class="modal fade" id="list-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="modal-body-wrapper d-flex flex-column">
+                                <div class="modal-title d-flex justify-content-center">
+                                    <span>{{ showList.text }}</span>
+                                </div>
+                                <!-- theme title -->
+                                <div class="modal-description d-flex justify-content-center">
+                                    <span>{{ showList.content.title }}</span>
+                                </div>
+                                <!-- Modal 內容 -->
+                                <section class="d-flex" :class="{ 'flex-1': !isUnder768 }">
+                                    <div class="modal-list-content d-flex w-100">
+                                        <div class="img-wrapper">
+                                            <div class="d-flex justify-content-center align-items-center h-100">
+                                                <!-- b-img -->
+                                                <img v-bind:src="'./assets/img/' + showList.content.mainImg" alt="大圖">
+                                            </div>
+                                        </div>
+                                        <!-- listPoint + s-img -->
+                                        <div class="modal-list-content__right d-flex flex-column justify-content-center"
+                                            :class="{ 'flex-1': !isUnder768 }">
+                                            <!-- listPoint -->
+                                            <div class="d-flex justify-content-center align-items-center list-circle">
+                                                <ul>
+                                                    <li v-for="listPoint in showList.content.listPoints"
+                                                        class="list-point text-gray">
+                                                        {{ listPoint }}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- s-img -->
+                                            <div class="d-flex justify-content-center w-100 imgs">
+                                                <div v-for="(subImg, j) in showList.content.subImgs" :key="j"
+                                                    class="s-img">
+                                                    <img class="img-list" v-bind:src="'./assets/img/' + subImg"
+                                                        v-bind:alt="'小圖-' + (j + 1)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section> <!-- section3 -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

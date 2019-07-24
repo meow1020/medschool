@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>講糖小學堂 好禮回饋</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        * {
+            font-family: 'Helvetica Neue', '微軟正黑體', sans-serif;
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1364px;
+            }
+        }
+
+        #title .logo {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+
+        #title h1 {
+            color: #3294C2;
+            font-size: 4rem;
+            /* font-weight: normal; */
+        }
+
+        #title {
+            border-bottom: 0.5rem solid #8FD0D6;
+            padding: 1.5rem 0 0.5rem 0;
+        }
+
+        #about .picture {
+            height: 9rem;
+            margin: 2rem 3rem 2rem 2rem;
+        }
+
+        #about .picture img {
+            object-fit: contain;
+            max-height: 9rem;
+        }
+
+        #about h2 {
+            color: #707070;
+            font-size: 2rem;
+            margin: 0 2rem 0 0;
+            font-weight: normal;
+        }
+
+        #about span {
+            color: black;
+            font-weight: bold;
+        }
+
+        #about h2+h2 {
+            margin-top: 1.5rem;
+        }
+
+        .button button {
+            width: 20.5rem;
+            height: 8rem;
+            background-color: #8FD0D6;
+            font-size: 2rem;
+            color: white;
+            margin: 0rem 1rem 2rem 1rem;
+        }
+
+        .bottom-content {
+            border: #8FD0D6 0.75rem solid;
+            border-radius: 3rem;
+            padding: 1rem 5.5rem 4.5rem 5.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .bottom-content h6 {
+            font-size: 1.5rem;
+            color: #707070;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        .bottom-content p {
+            font-size: 2rem;
+            margin-top: 3rem;
+            color: black;
+        }
+
+        .bottom-button {
+            width: 26rem;
+            height: 7.5rem;
+            background-color: #8FD0D6;
+            border-radius: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="feedback" class="container">
+        <!-- 標題 -->
+        <div id="title" class="d-flex justify-content-center align-items-center">
+            <img class="logo" src="./assets/img/logo.png" alt="Logo">
+            <h1>講糖小學堂 好禮回饋</h1>
+        </div>
+        <!-- 中間介紹 -->
+        <div id="about" class="d-flex justify-content-center align-items-center">
+            <div class="picture h-100">
+                <img src="./assets/img/about.png" alt="講堂小學堂">
+            </div>
+            <div>
+                <h2>填寫<span>講糖小學堂意見回饋</span>，前100名可以把32G隨身碟直接帶回家，還有機會抽中8吋平板電腦！ <h2>
+                        <h2>機會難得，馬上體驗講糖小學堂衛教工具！</h2>
+            </div>
+        </div>
+        <!-- 按鈕連結 -->
+        <div class="container button d-flex ">
+            <button v-bind:class="{ selected: showListIndex === index }"
+            @click="showListIndex = index">活動說明</button>
+            <button onclick="myFunction1()">意見回饋</br>線上填寫</button>
+            <button onclick="myFunction2()">意見回饋</br>檔案下載</button>
+            <button>中獎名單</button>
+        </div>
+        <!-- 下方內容 -->
+        <div class="bottom-content d-flex flex-column align-items-center ">
+            <!-- 活動說明 -->
+            <h6>
+                <p>・活動說明</p>
+                院所糖尿病衛教人員填寫意見回饋問卷，前100名填寫之糖尿病衛教人員，
+                即贈送32G隨身碟一支。 </br>活動時間結束後，為使各院所能更方便的使用講糖小學堂作為線上衛教工具，
+                將加碼抽出2間醫療院所為對象，贈送8吋平板電腦，供醫療院所作為衛教時的輔助工具。
+                得獎名單於活動結束後公布於講糖小學堂網站。 </br>
+                <p>・參加辦法</p>
+                1. 院所糖尿病衛教團隊成員，下載講糖App後加入「醫療專業人員」會員，於診間使用講糖小學堂進行糖尿病衛教，
+                並拍攝衛教現場照片。 </br>2. 衛教現場照片須徵求病人同意背面入鏡，並清楚呈現「講糖小學堂」衛教工具、手機／平板掃描QR Code畫面。
+                </br>3. 線上填寫意見回饋問卷或下載意見回饋檔案填寫。（檔案須回傳至講糖信箱：service@presenter.com.tw，
+                主旨書寫：講糖小學堂_意見回饋_您的姓名） </br>4. 主辦單位會公布並以E-mail通知得獎者，獎品將於中獎資料核對後陸續寄送。 </br>
+                <p>・參加資格</p>
+                凡下載講糖App，加入「醫療專業人員」會員，且完整填寫問卷內容，並留下正確聯絡資料者，皆可參加。
+                （個人重複填答以1次計算） </br>若填答資料不全、通知得獎人遭退件或逾30天未回覆者，則視為自動放棄中獎機會。 </br>
+                <p>・活動時間</p>
+                108年08月08日至108年9月08日止
+                <p>・活動獎品</p>
+                1. 32G隨身碟 （前100名填寫之糖尿病衛教人員為贈送對象） </br>
+                2. 8吋平板電腦 2台 （以醫療院所為贈送對象）
+                <p>・注意事項</p>
+                1. 填答問卷者即自動視為同意主辦單位活動辦法，並同意基於本活動之目的，
+                於網站公布得獎名單時，顯示部分姓名與服務單位。 </br>2. 加碼提供的2台平板電腦，係以「院所衛教使用」為贈送對象。
+                加碼抽獎以院所人員填答問卷人數為抽獎機會次數，即同一院所若有多位人員填答，中獎機率將隨之提升。 </br>3. 抽獎將以電腦亂數系統進行，
+                同一醫療院所僅有一次中獎機會，若重複中獎則重新抽至第二間不重複院所為止。 </br>4. 本活動贈品以實物為準，不得抵扣現金，
+                主辦單位保留更換贈品的權利。 </br>5. 參加活動者若填答資料不全、通知得獎人遭退件或逾30天未回覆者，則視為自動放棄中獎機會。
+                </br>6. 參加活動者不得破壞或干擾活動網站上各項資料、活動或功能，若涉及違法，主辦單位將保留法律追訴權。 </br>7. 主辦單位不會以電話或要求匯款方式，
+                要求得獎者匯回中獎應繳納稅金款項。 </br>8. 本次活動由醫事人員填寫的個人資料、照片，蒐集目的為抽獎活動，
+                後續主辦單位也將依據個人資料保護法相關規定妥善維護。 </br>9. 講糖（傳述國際有限公司）保留隨時更改或終止本活動之權利。 </br>
+                <p>・主辦單位</p>
+                講糖（傳述國際有限公司） </br>如對此問卷調查有任何疑問，歡迎以E-mail與講糖聯絡：service@presenter.com.tw
+                （主旨請書寫：講糖小學堂_好禮回饋_詢問）
+            </h6><!-- 活動說明 -->
+
+            <!-- 中獎名單 -->
+            <h6>
+                講糖小學堂意見回饋活動熱烈進行中，請各院所糖尿病衛教團隊踴躍參與！</br>
+                中獎名單將於活動時間（108年08月08日至108年9月08日止）結束後公布，主辦單位會另外以E-mail通知隨身碟、平板電腦得獎者，請耐心等待。
+
+            </h6>
+            <button class="bottom-button" onclick="myFunction1()">我要填寫</br>講糖小學堂意見回饋</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function myFunction1() {
+            location.href = "";
+        }
+
+        function myFunction2() {
+            location.href = "";
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</body>
+
+
+</html>

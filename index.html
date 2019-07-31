@@ -71,6 +71,16 @@
                             </div>
                         </div>
                     </button>
+                    <div class="line-separator bg-white"></div>
+                    <button class="link" onclick="jump('#section4')">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/link2.svg" alt="影音經驗分享">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>講糖小學堂</span>
+                                <span>影音經驗分享</span>
+                            </div>
+                        </div>
+                    </button>
 
                 </div>
 
@@ -212,8 +222,9 @@
                 <button class="btn btn-back" onclick="jump('#section1')">回到頂部</button>
             </div>
 
-            <div class="modal fade" id="list-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
+            <!-- modal -->
+            <div class="modal fade modal-hmmm" id="list-modal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -235,14 +246,16 @@
                                             <div class="img-wrapper">
                                                 <div class="d-flex justify-content-center align-items-center h-100">
                                                     <!-- b-img -->
-                                                    <img v-bind:src="'./assets/img/' + showList.content.mainImg" alt="大圖">
+                                                    <img v-bind:src="'./assets/img/' + showList.content.mainImg"
+                                                        alt="大圖">
                                                 </div>
                                             </div>
                                             <!-- listPoint + s-img -->
                                             <div class="modal-list-content__right d-flex flex-column justify-content-center"
                                                 :class="{ 'flex-1': !isUnder768 }">
                                                 <!-- listPoint -->
-                                                <div class="d-flex justify-content-center align-items-center list-circle">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center list-circle">
                                                     <ul>
                                                         <li v-for="listPoint in showList.content.listPoints"
                                                             class="list-point text-gray">
@@ -269,6 +282,92 @@
             </div>
 
         </section> <!-- section3 -->
+
+        <!-- section4 -->
+        <section id="section4" class="d-flex flex-column">
+            <div class="container d-flex flex-column flex-1">
+                <!-- 標題 -->
+                <div class="title1 d-flex flex-column">
+                    <h1>講糖小學堂</h1>
+                    <h2 class="text-gray">影音經驗分享</h2>
+                </div>
+
+                <!-- 下方video -->
+                <div v-if="!isUnder1024" class="d-flex flex-1 ">
+                    <!-- left list -->
+                    <div class="list text-gray ">
+                        <ol class="d-flex flex-column ">
+                            <li v-for="(list2, index) in list2s" class="flex-1 d-flex align-items-center">
+                                <div class="list-item" v-bind:class="{ selected: showList2Index === index }"
+                                    @mouseover="showList2Index = index">
+                                    <span v-html="list2.text"></span>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- right video -->
+                    <div class="video-title d-flex flex-column justify-content-center align-items-center flex-1 ">
+                        <!-- 影片標題 -->
+                        <li v-for="(list2, index) in list2s" :key="index" v-if="index === showList2Index"
+                            class="flex-1 d-flex align-items-center">
+                            <span v-html="list2.text" class="text-center"></span>
+                            <!-- <div class="list-item" v-bind:class="{ selected: showList2Index === index }"
+                                @mouseover="showList2Index = index">
+                            </div> -->
+                        </li>
+                        <!-- 影片圖片連結 -->
+                        <div>
+                            <a href=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1024 下方影片 -->
+                <div v-else class="flex-1 h-100">
+                    <!-- video list -->
+                    <div class="grid-container d-flex  flex-column align-items-center">
+                        <div v-for="(list2, index) in list2s"
+                            class="grid-item bg-blue text-gray d-flex  justify-content-center align-items-center"
+                            @click="showModal2(index)">
+                            <span class="text-center" v-html="list2.text"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- back to top -->
+            <div class="back bg-blue d-flex justify-content-center align-items-center">
+                <button class="btn btn-back" onclick="jump('#section1')">回到頂部</button>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade modal-hmmm" id="list-modal2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="modal-body-wrapper d-flex flex-column">
+                                <!-- 影片標題 -->
+                                <div class="modal-title d-flex justify-content-center">
+                                    <div v-html="showList2.text" class="text-center"></div>
+                                </div>
+                                <div class="modal-video d-flex flex-column align-items-center ">
+
+                                    <!-- 影片圖片連結 -->
+                                    <div>
+                                        <a href=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"

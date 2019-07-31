@@ -33,6 +33,10 @@
         max-width: 100%;
         object-fit: contain;
     }
+
+    #section4 {
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -59,16 +63,16 @@
         padding: 2.5rem 1rem;
     }
 
-    #list-modal .list-circle {
+    .modal-hmmm .list-circle {
         padding-bottom: 1.5rem;
     }
 
-    #list-modal .modal-list-content .img-wrapper img {
+    .modal-hmmm .modal-list-content .img-wrapper img {
         height: 350px;
         object-fit: contain;
     }
 
-    #list-modal .list-point {
+    .modal-hmmm .list-point {
         font-size: 24px;
     }
 }
@@ -87,11 +91,12 @@
     }
 
     .link {
-        padding: 0 2rem;
+        padding: 0 0.75rem;
         font-size: 1.6rem;
     }
     .link img {
-        height: 2rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
     }
 
     #section2 .step span {
@@ -119,35 +124,49 @@
         font-size: 2.5rem;
     }
 
-    #list-modal .modal-list-content {
+    .modal-hmmm .modal-list-content {
         flex-direction: column;
     }
 
-    #list-modal .modal-list-content .img-wrapper {
+    .modal-hmmm .modal-list-content .img-wrapper {
         width: 100%;
         margin-bottom: 2rem;
         max-height: 50%;
     }
 
-    #list-modal .modal-list-content .img-wrapper img {
+    .modal-hmmm .modal-list-content .img-wrapper img {
         width: 80%;
         margin: 0 auto;
         object-fit: contain;
     }
 
-    #list-modal .list-point {
+    .modal-hmmm .list-point {
         font-size: 16px;
     }
 
-    #list-modal .list-circle {
+    .modal-hmmm .list-circle {
         padding-bottom: 3rem;
     }
 
-    #list-modal .modal-list-content .modal-list-content__right {
+    .modal-hmmm .modal-list-content .modal-list-content__right {
         margin: 0;
     }
 
-    #list-modal .modal-list-content .modal-list-content__right .s-img {
+    .modal-hmmm .modal-list-content .modal-list-content__right .s-img {
         max-width: 33.3%;
     }
+
+    #section4 {
+        height: 100vh;
+    }
+
+    #section4 .grid-item {
+        padding: 10px;
+        font-size: 2rem;
+        width: 18rem;
+        height: 10rem;
+        cursor: pointer;
+        margin: 1rem;
+    }
+
 }

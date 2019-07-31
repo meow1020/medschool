@@ -269,6 +269,20 @@ var app = new Vue({
                 }
             },
 
+        ],
+
+        showList2Index: 0,
+        list2s: [
+            {
+                text: '糖尿病衛教學會</br>杜思德醫師推薦'
+            },
+            {
+                text: '講糖小學堂</br>核心概念'
+            },
+            {
+                text: '講糖小學堂</br>使用經驗分享'
+            },
+
         ]
     },
     computed: {
@@ -281,11 +295,18 @@ var app = new Vue({
         showList() {
             return this.lists[this.showListIndex];
         },
+        showList2() {
+            return this.list2s[this.showList2Index];
+        },
     },
     methods: {
         showModal(listIndex) {
             this.showListIndex = listIndex;
             $('#list-modal').modal('show');
-        }
+        },
+        showModal2(list2Index) {
+            this.showList2Index = list2Index;
+            $('#list-modal2').modal('show');
+        },
     }
 })

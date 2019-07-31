@@ -291,13 +291,13 @@
     width: 80%;
 }
 
-#list-modal .modal-dialog {
+.modal-hmmm .modal-dialog {
     max-width: 90%;
     margin: 0 auto;
     max-height: 90%;
 }
 
-#list-modal .close {
+.modal-hmmm .close {
     float: unset;
     position: absolute;
     right: 15px;
@@ -305,39 +305,91 @@
     font-size: 3rem;
 }
 
-#list-modal .modal-body {
+.modal-hmmm .modal-body {
     padding: 1rem;
 }
 
-#list-modal .modal-body-wrapper {
+.modal-hmmm .modal-body-wrapper {
     padding: 0 1rem 1rem;
 }
 
-#list-modal .modal-title {
+.modal-hmmm .modal-title {
     font-size: 3rem;
     color: #3294C2;
 }
 
-#list-modal .modal-title {
+.modal-hmmm .modal-title {
     padding: 2rem 0;
 }
 
-#list-modal .modal-content-wrapper {
+.modal-hmmm .modal-content-wrapper {
     max-height: calc(100vh - 170px);
     overflow: scroll;
 }
 
-#list-modal .modal-description {
+.modal-hmmm .modal-description {
     min-height: 5rem;
     font-size: 2.5rem;
     color: #3294C2;
     margin-bottom: 2rem;
 }
 
-#list-modal .modal-list-content {
+.modal-hmmm .modal-list-content {
     flex-direction: row;
 }
 
-#list-modal .modal-list-content .modal-list-content__right {
+.modal-hmmm .modal-list-content .modal-list-content__right {
     margin-left: 2rem;
+}
+
+#section4 .list {
+    font-size: 1.75rem;
+    font-weight: lighter;
+    margin-right: 1rem;
+    min-width: 300px;
+    margin-top: 1rem;
+}
+
+#section4 .list-item {
+    border-left: 4px solid transparent;
+    padding-left: 8px;
+    margin: 1rem 0;
+}
+
+#section4 .list-item.selected,
+#section4 .list-item:hover {
+    font-weight: bold;
+    color: #3294C2;
+    border-color: #3294C2;
+}
+#section4 .video-title span {
+    font-size: 2rem;
+    color: #3294C2;
+
+}
+
+#section4 .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    padding: 2rem
+
+}
+#section4 .grid-item {
+    padding: 20px;
+    font-size: 2rem;
+    width: 23.5rem;
+    height: 12rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+#section4 .grid-item:hover {
+    background-color: #4eb3e2;
+    color: white;
+}
+
+#section4 .grid-item span {
+    width: 80%;
 }

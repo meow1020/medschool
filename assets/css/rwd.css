@@ -47,16 +47,26 @@
     #section1 #links {
         height: 9rem;
     }
+
+    #section2 {
+        height: 100vh;
+    }
+
     .link {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     #section2 p {
+        font-size: 2rem;
         padding: 0 0 0 2rem;
     }
     
     .step {
         padding: 2rem 2rem;
+    }
+
+    #section3 {
+        height: 100vh;
     }
 
     #section3 .img-club {
@@ -75,6 +85,10 @@
     .modal-hmmm .list-point {
         font-size: 24px;
     }
+
+    #section4 {
+        height: 100vh;
+    }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -91,12 +105,26 @@
     }
 
     .link {
-        padding: 0 0.75rem;
-        font-size: 1.6rem;
+        padding: 0 0.5rem;
+        font-size: 0.5rem;
     }
     .link img {
-        height: 1.5rem;
+        height: 1.4rem;
         margin-right: 0.5rem;
+    }
+
+    .line-separator {
+        width: 1px;
+        height: 40px;
+    }
+
+    #section1 #about {
+        margin: 0.5rem 0;
+    }
+
+    #section2 h3 {
+        font-size: 2.5rem;
+        /* font-weight: normal; */
     }
 
     #section2 .step span {
@@ -104,7 +132,7 @@
     }
 
     #section2 .step p {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
     }
 
     #section3 .grid-container {
@@ -112,6 +140,7 @@
     }
 
     #section2 p {
+        font-size: 2.25rem;
         padding: 0 0 0 1rem;
     }
 
@@ -163,8 +192,8 @@
     #section4 .grid-item {
         padding: 10px;
         font-size: 2rem;
-        width: 18rem;
-        height: 10rem;
+        width: 16rem;
+        height: 8rem;
         cursor: pointer;
         margin: 1rem;
     }

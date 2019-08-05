@@ -111,12 +111,31 @@
                 </div>
                 <h3 class="text-gray">看看別人實地怎麼做，讓您的衛教工作更輕鬆，糖友吸收更快更落實。</h3>
             </div>
+            <!-- 使用說明 767.98-->
+            <div v-if="isUnder768" class="bg-blue flex-1 ">
+                <div class="steps container d-flex flex-column h-100">
+                    <div v-for="(step, index) in steps"
+                        class="step d-flex flex-column align-items-center justify-content-center flex-1">
+                        <div class="step-img d-flex align-items-center h-100">
+                            <span class="text-center">
+                                Step<br>{{ index + 1 }}
+                            </span>
+
+                            <div class="h-100 d-flex align-items-center img-wrapper">
+                                <img :src="'./assets/img/' + step.img" :alt="'step' + (index + 1)">
+                            </div>
+                        </div>
+
+                        <p class="p767 text-gray">{{ step.text }}</p>
+                    </div>
+                </div>
+            </div>
             <!-- 使用說明 -->
-            <div class="bg-blue flex-1 ">
+            <div v-else class="bg-blue flex-1 ">
                 <div class="steps container d-flex flex-column h-100">
                     <div v-for="(step, index) in steps"
                         class="step d-flex align-items-center justify-content-center flex-1"
-                        :class="((index + 1) % 2 === 1) ? 'flex-row' : 'flex-row-reverse'">
+                        :class="((index +1) %2 === 1) ? 'flex-row' : 'flex-row-reverse'">
 
                         <div class="step-img d-flex align-items-center h-100"
                             :class="((index + 1) % 2 === 1) ? 'flex-row' : 'flex-row-reverse'">

@@ -84,7 +84,7 @@
 #section1 .video-circle {
     position: absolute;
     transform: translateY(-50%);
-    height: 90%;
+    height: 60%;
     top: 50%;
     z-index: -1;
 }
@@ -131,7 +131,7 @@
     font-weight: lighter;
     font-size: 1.25rem;
     line-height: 1.5rem;
-    margin: 24px 0;
+    margin: 1.5rem 0;
 }
 
 .title1 {
@@ -186,8 +186,12 @@
 
 #section2 p {
     font-size: 1.5rem;
-    font-weight: lighter;
+    font-weight: normal;
     border-left: #3294C2 0.5rem solid;
+}
+
+#section2 .p767 {
+    padding-left: 1rem;
 }
 
 .back {

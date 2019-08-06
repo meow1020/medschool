@@ -274,13 +274,39 @@ var app = new Vue({
         showList2Index: 0,
         list2s: [
             {
-                text: '糖尿病衛教學會</br>杜思德醫師推薦'
+                text: '糖尿病衛教學會</br>杜思德醫師推薦',
+                datas: [
+                    {
+                        link: 'https://players.brightcove.net/5507778861001/default_default/index.html?videoId=6068074745001',
+                        image: './assets/img/videoshare1.png',
+                        about: '中華民國糖尿病衛教學會理事長 專題介紹',
+                    },
+                ],
             },
             {
-                text: '講糖小學堂</br>核心概念'
+                text: '講糖小學堂</br>核心概念',
+                datas: [
+                    // {
+                    //     link: '',
+                    //     image: '',
+                    //     about: '',
+                    // },
+                ],
             },
             {
-                text: '講糖小學堂</br>使用經驗分享'
+                text: '講糖小學堂</br>使用經驗分享',
+                datas: [
+                    {
+                        link: 'http://210.65.89.114/TADE/TADE_Video2/tade/07072019/s12/04/',
+                        image: './assets/img/videoshare3.png',
+                        about: '衛教師 林冠怡小姐  2019衛教學會年會分享',
+                    },
+                    // {
+                    //     link: '',
+                    //     image: '',
+                    //     about: '',
+                    // },
+                ],
             },
 
         ]

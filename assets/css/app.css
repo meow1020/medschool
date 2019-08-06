@@ -1,5 +1,5 @@
 * {
-    font-family: 'Helvetica Neue','微軟正黑體', sans-serif;
+    font-famil: 'Helvetica Neue','微軟正黑體', sans-serif;
 }
 
 @media (min-width: 1200px) {
@@ -46,10 +46,9 @@
     border-bottom: 4px solid #3294C2;
 }
 
-#section1 {
-    padding-top: 30px;
+/* #section1 {
     height: 100vh;
-}
+} */
 
 .logo {
     width: 7.25rem;
@@ -81,6 +80,7 @@
     flex: 2;
 }
 
+
 #section1 .video-circle {
     position: absolute;
     transform: translateY(-50%);
@@ -91,7 +91,10 @@
 
 #section1 .video {
     object-fit: contain;
+    position: relative;
 }
+
+
 #section1 #links {
     background-color: #3294C2;
     height: 6rem;
@@ -346,6 +349,10 @@
     margin-left: 2rem;
 }
 
+/* #section4 {
+    height: 100vh;
+} */
+
 #section4 .list {
     font-size: 1.75rem;
     font-weight: lighter;
@@ -366,10 +373,17 @@
     color: #3294C2;
     border-color: #3294C2;
 }
+
+#section4 .video-title1 span {
+    font-size: 2rem;
+    color: #3294C2;
+    margin: 2rem 0 2rem 0;
+}
+
 #section4 .video-title span {
     font-size: 2rem;
     color: #3294C2;
-
+    margin: 2rem 0 2rem 0;
 }
 
 #section4 .grid-container {
@@ -396,4 +410,42 @@
 
 #section4 .grid-item span {
     width: 80%;
+}
+
+/* #section4 .modal-title1 {
+    font-size: 2.5rem;
+
+} */
+
+#section4 .video2 .text2 {
+    font-size: 1.5rem;
+    color: #707070;
+    margin: 0 0 0.75rem 0;
+}
+
+#section4 .modal-video .text2 {
+    font-size: 2rem;
+    color: #707070;
+    margin: 0 0 1rem 0;
+}
+
+/* #section4 .modal-video-img a{
+    width: 5rem;
+} */
+
+#section4 .modal-video-img img {
+    width: 18rem;
+}
+
+#section4 .modal-video-img1 img {
+    width: 35rem;
+    margin: 0 0 1rem 0;
+}
+
+#section4 .modal-video .text2 + .modal-video-img1 {
+    margin-top: 0.5rem;
+}
+
+#section4 .video2 + .video2 {
+    margin-top: 1rem;
 }

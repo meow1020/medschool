@@ -10,16 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+
     <style>
         * {
             font-family: 'Helvetica Neue', '微軟正黑體', sans-serif;
         }
 
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 1364px;
-            }
-        }
+
 
         #title .logo {
             width: 6.5rem;
@@ -29,7 +26,6 @@
         #title h1 {
             color: #3294C2;
             font-size: 4rem;
-            /* font-weight: normal; */
         }
 
         #title {
@@ -70,10 +66,15 @@
             font-size: 2rem;
             color: white;
             margin: 0rem 1rem 2rem 1rem;
+            border: 0;
         }
 
         .button button:hover {
             background-color: #3294C2;
+        }
+
+        .button button:focus {
+            outline: none;
         }
 
         .bottom-content {
@@ -108,6 +109,22 @@
             color: white;
             font-size: 2rem;
             margin-top: 5rem;
+            border: 0;
+        }
+
+        .bottom-button:hover {
+            background-color: #3294C2;
+        }
+
+        .bottom-button:focus {
+            outline: none;
+        }
+
+        .bottom-content .content-text2 {
+            font-size: 1.5rem;
+            color: #707070;
+            font-weight: normal;
+            line-height: 1.5;
         }
 
         .bottom-button-index {
@@ -118,8 +135,20 @@
             color: white;
             font-size: 2rem;
             margin-top: 5rem;
+            border: 0;
         }
+
+        .bottom-button-index:hover {
+            background-color: #3294C2;
+        }
+
+        .bottom-button-index:focus {
+            outline: none;
+        }
+
+
     </style>
+    <link rel="stylesheet" href="./assets/css/f-rwd.css">
 </head>
 
 <body>
@@ -129,18 +158,41 @@
             <img class="logo" src="./assets/img/logo.png" alt="Logo">
             <h1>講糖小學堂 好禮回饋</h1>
         </div>
-        <!-- 中間介紹 -->
-        <div id="about" class="d-flex justify-content-center align-items-center">
+
+        <!-- 中間介紹 767 -->
+        <div v-if="isUnder767" id="about" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="picture h-100 d-flex justify-content-center align-items-center">
+                <img src="./assets/img/about.png" alt="講堂小學堂">
+                <h2>填寫<span>講糖小學堂意見回饋</span>，前100名可以把32G隨身碟直接帶回家，還有機會抽中8吋平板電腦！ <h2>
+            </div>
+            <div>
+                <h2>機會難得，馬上體驗講糖小學堂衛教工具！</h2>
+            </div>
+        </div>
+
+        <!-- 中間介紹 1 -->
+        <div v-else id="about" class="d-flex justify-content-center align-items-center">
             <div class="picture h-100">
                 <img src="./assets/img/about.png" alt="講堂小學堂">
             </div>
             <div>
-                <h2>填寫<span>講糖小學堂意見回饋</span>，前100名可以把32G隨身碟直接帶回家，還有機會抽中8吋平板電腦！ <h2>
+                <h2>填寫000<span>講糖小學堂意見回饋</span>，前100名可以把32G隨身碟直接帶回家，還有機會抽中8吋平板電腦！ <h2>
                         <h2>機會難得，馬上體驗講糖小學堂衛教工具！</h2>
             </div>
         </div>
-        <!-- 按鈕連結 -->
-        <div class="container button d-flex ">
+        <!-- 按鈕連結 330 -->
+        <div v-if="isUnder330" class="container button d-flex flex-column">
+            <div class="d-flex">
+                <button @click="showContent = 1">活動說明</button>
+                <button onclick="myFunction1()">意見回饋</br>線上填寫</button>
+            </div>
+            <div class="d-flex">
+                <button onclick="myFunction2()">意見回饋</br>檔案下載</button>
+                <button @click="showContent = 4">中獎名單</button>
+            </div>
+        </div>
+        <!-- 按鈕連結 1 -->
+        <div v-else class="container button d-flex ">
             <button @click="showContent = 1">活動說明</button>
             <button onclick="myFunction1()">意見回饋</br>線上填寫</button>
             <button onclick="myFunction2()">意見回饋</br>檔案下載</button>
@@ -150,7 +202,7 @@
         <div class="bottom-content d-flex flex-column align-items-center ">
             <!-- 活動說明 -->
             <div v-if="showContent === 1" class="d-flex flex-column align-items-center">
-                <ul  class="content-text">
+                <ul class="content-text">
                     <li class="line">
                         <b>活動說明</b>
                     </li>
@@ -215,10 +267,10 @@
                 </ul>
                 <button class="bottom-button" onclick="myFunction1()">我要填寫</br>講糖小學堂意見回饋</button>
             </div>
-            
+
             <!-- 中獎名單 -->
             <div v-if="showContent === 4" class="d-flex flex-column align-items-center">
-                <p  class="content-text">
+                <p class="content-text2">
                     講糖小學堂意見回饋活動熱烈進行中，請各院所糖尿病衛教團隊踴躍參與！</br>
                     中獎名單將於活動時間（108年08月08日至108年9月08日止）結束後公布，主辦單位會另外以E-mail通知隨身碟、平板電腦得獎者，請耐心等待。
                 </p>
@@ -232,15 +284,15 @@
 
     <script>
         function myFunction1() {
-            location.href = "#";
+            location.href = "https://www.surveycake.com/s/gwbxq";
         }
 
         function myFunction2() {
-            location.href = "#";
+            location.href = "./assets/file/feedback-down.docx";
         }
 
         function myFunctionIndex() {
-            location.href = "http://www.medschool.mosil.studio";
+            location.href = "./index.html";
         }
 
         var feedback = new Vue({
@@ -250,7 +302,16 @@
                     showContent: 1,
                 };
             },
+            computed: {
+                isUnder767() {
+                    return window.innerWidth <= 767;
+                },
+                isUnder330() {
+                    return window.innerWidth <= 330;
+                }
+            }
         });
+
     </script>
 
 

@@ -1,0 +1,130 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1364px;
+    }
+}
+
+@media screen and (min-width: 1023.98px) {
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    #about .picture {
+        margin: 2rem 1rem 2rem 1rem;
+    }
+
+    #about h2 {
+        margin: 0 1.5rem 0 0;
+    }
+
+    .button button {
+        margin: 0rem 0.75rem 2rem 0.75rem;
+    }
+
+    .bottom-content {
+     padding: 0.5rem  3rem 3rem 3rem;  
+    }
+    
+
+}
+
+
+@media screen and (max-width: 767.98px) {
+    html {
+        font-size: 8px;
+    }
+
+    #title h1 {
+        font-size: 3.25rem;
+    }
+
+    #title .logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #title {
+        border-bottom: 0.5rem solid #8FD0D6;
+    }
+
+    #about .picture {
+        height: 8rem;
+        margin: 1rem;
+    }
+
+    #about .picture img {
+        object-fit: contain;
+        max-height: 7rem;
+    }
+
+    #about .picture h2 {
+        margin: 0rem  0 0 1rem;
+    }
+
+    #about h2 {
+        margin: 0rem 1rem 1rem 1rem;
+    }
+
+    #about h2+h2 {
+        margin-top: 0;
+    }
+
+    .button button {
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.75rem;
+        margin: 0.25rem 0.25rem 0rem 0.25rem;
+    }
+
+    .bottom-content {
+        border: #8FD0D6 0.5rem solid;
+        border-radius: 1rem;
+        padding: 1rem 1.75rem 2rem 1rem;
+        margin: 1rem 0 2rem 0;
+    }
+
+    .bottom-content .content-text {
+        font-size: 1.75rem;
+        padding: 0 0 0 1.75rem;
+    }
+
+    .bottom-content .line {
+        margin-top: 1rem;
+        font-size: 2rem;
+        color: black;
+    }
+
+    .bottom-content ol {
+        padding-left: 1.75rem; 
+    }
+
+    .bottom-button {
+        width: 15rem;
+        height: 5rem;
+        border-radius: 0.75rem;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+
+    .bottom-content p {
+        margin-top: 1rem;
+        padding: 0 0 0 1rem;
+    }
+
+    .bottom-content .content-text2 {
+        font-size: 1.75rem;
+        padding: 0 0 0 1rem;
+    }
+
+    .bottom-button-index {
+        width: 8rem;
+        height: 3rem;
+        border-radius: 0.75rem;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}

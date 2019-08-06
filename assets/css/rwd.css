@@ -1,5 +1,20 @@
 @media screen and (min-width: 1023.98px) {
 
+    #section1 {
+        height: 100vh;
+    }
+
+    #section1 {
+        padding-top: 30px;
+    }
+
+    #section1 .yellow-button {
+        height: 8.5rem;
+        position: absolute;
+        right: 45px;
+        bottom: 30px;
+    }
+    
     #section2 {
         height: 100vh;
     }
@@ -16,9 +31,9 @@
         margin: 0;
     }
 
-    #section3 {
+    /* #section3 {
         height: 100vh;
-    }
+    } */
 
     .list-circle {
         padding-left: 50px;
@@ -44,6 +59,14 @@
         font-size: 12px;
     }
 
+    #section1 {
+        height: 100vh;
+    }
+
+    #section1 .yellow-button-ct {
+        padding: 2rem 0;
+    }
+
     #section1 #links {
         height: 9rem;
     }
@@ -65,9 +88,9 @@
         padding: 2rem 2rem;
     }
 
-    #section3 {
+    /* #section3 {
         height: 100vh;
-    }
+    } */
 
     #section3 .img-club {
         padding: 2.5rem 1rem;
@@ -86,8 +109,16 @@
         font-size: 24px;
     }
 
-    #section4 {
+    /* #section4 {
         height: 100vh;
+    } */
+
+    #section4 .modal-title {
+        font-size: 3rem;
+    }
+
+    #section4 .modal-video-img img {
+        width: 50rem;
     }
 }
 
@@ -97,11 +128,28 @@
     }
 
     #section1 {
-        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .logo {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    #section1 .video {
+        max-height: 20rem;
     }
 
     #section1 .video-circle {
         height: 60%;
+    }
+
+    #section1 .yellow-button-ct {
+        padding: 1.5rem 0;
+    }
+
+    #section1 .yellow-button {
+        height: 7rem;
     }
 
     .link {
@@ -185,9 +233,9 @@
         max-width: 33.3%;
     }
 
-    #section4 {
+    /* #section4 {
         height: 100vh;
-    }
+    } */
 
     #section4 .grid-item {
         padding: 10px;
@@ -198,4 +246,20 @@
         margin: 1rem;
     }
 
+    #section4 .modal-video-img img {
+        width: 20rem;
+    }
+
+}
+
+@media screen and (min-width: 1025px) {
+    #section3 {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 330px) and (max-width: 767.98px) {
+    #section4 {
+        height: 100vh;
+    }
 }

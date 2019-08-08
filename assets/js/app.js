@@ -12,11 +12,11 @@ var app = new Vue({
         steps: [
             {
                 text: '將講糖小學堂直立於診間衛教桌上，翻閱側標籤上標註各主題分類，找出本日衛教主題。',
-                img: 'step1.svg',
+                img: 'step1.png',
             },
             {
                 text: '搭配圖文講解衛教資訊，手機掃描每頁右上方QR Code，獲取更多線上衛教資訊。',
-                img: 'step2.svg',
+                img: 'step2.png',
             },
             {
                 text: '鼓勵糖友下載安裝講糖APP，在家也要溫習衛教資訊，建立良好的生活習慣，改善血糖控制成效！',

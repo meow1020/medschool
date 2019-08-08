@@ -68,17 +68,19 @@
 
 #section1 h1 {
     color: #3294C2;
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin: 0;
 }
 
 #section1 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: normal;
-    margin: 16px;
+    margin: 1rem;
+  
 }
 
 #section1 h3 {
+    font-size: 1.5rem;
     margin: 1rem;
     font-weight: normal;
 }
@@ -102,7 +104,7 @@
 }
 
 #section1 .video-text2 {
-    min-height: 5rem;
+    min-height: 7rem;
 }
 
 #section1 #links {
@@ -145,7 +147,7 @@
     font-weight: lighter;
     font-size: 1.25rem;
     line-height: 1.5rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
 }
 
 .title1 {
@@ -166,7 +168,7 @@
 
 #section2 h3 {
     font-size: 1.75rem;
-    font-weight: lighter;
+    font-weight: normal;
     margin: 1.5rem 3rem 1.5rem ;
 }
 
@@ -194,7 +196,7 @@
 }
 
 #section2 .step img {
-    max-height: 90px;
+    max-height: 10rem;
     object-fit: contain;
 }
 
@@ -288,6 +290,12 @@
 .s-img+.s-img {
     margin-left: 8px;
 }
+
+#section3 .imgs span {
+    margin-top: 1rem;
+    
+}
+
 #section3 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;

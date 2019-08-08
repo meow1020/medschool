@@ -32,23 +32,24 @@
                     <h2 class="text-gray">全方面衛教工具 翻轉醫患溝通模式</h2>
                 </div>
                 <div class="d-flex justify-content-center position-relative video-wrapper" v-if="isUnder768">
-                    <img class="w-100 video" src="./assets/img/video-phone.gif" alt="video">
+                    <img class="w-100 video" src="./assets/img/video.png" alt="video">
                     <img class="video-circle" src="./assets/img/video-bg.svg" alt="背景">
 
                 </div>
                 <div class="d-flex justify-content-center position-relative video-wrapper" v-else>
-                    <img class="w-100 video" src="./assets/img/video.gif" alt="video">
+                    <img class="w-100 video" src="./assets/img/video.png" alt="video">
                     <img class="video-circle" src="./assets/img/video-bg.svg" alt="背景">
                 </div>
-                <div class="d-flex justify-content-center align-items-center video-text2 flex-1">
+                <!-- 1024 yellow-button-->
+                <div class="d-flex justify-content-center align-items-center video-text2">
                     <h3 class="text-gray">以深入淺出圖解糖尿病衛教知識，各大主題搭配糖友 <br>
                         常見迷思問答，新手糖友也能輕易搞懂糖尿病！
                     </h3>
+                    <!-- feedback button -->
+                    <a href="./feedback.html" class="yellow-button-ct">
+                        <img class="yellow-button" src="./assets/img/yellow-button.svg" alt="好禮回饋頁面">
+                    </a>
                 </div>
-                <!-- feedback button -->
-                <a href="./feedback.html" class="container yellow-button-ct position-relative d-flex justify-content-center ">
-                    <img class="yellow-button" src="./assets/img/yellow-button.svg" alt="好禮回饋頁面">
-                </a>
             </div>
             <!-- 連結 -->
             <div id="links">
@@ -93,7 +94,7 @@
                     <div class="d-flex flex-column text-center text-gray">
                         <span>傳述國際有限公司</span>
                         <span>台北市信義區基隆路一段420號3樓之3</span>
-                        <span>service@presenter.com.tw</span>
+                        <a href="mailto:service@presenter.com.tw">service@presenter.com.tw</a>
                         <span>Copyright © Presenter Ltd.Co.2017</span>
                     </div>
                 </div>
@@ -117,11 +118,10 @@
                 <div class="steps container d-flex flex-column h-100">
                     <div v-for="(step, index) in steps"
                         class="step d-flex flex-column align-items-center justify-content-center   flex-1">
-                        <div class="step-img d-flex align-items-center h-100">
+                        <div class="step-img d-flex align-items-center justify-content-center h-100">
                             <span class="text-center">
                                 Step<br>{{ index + 1 }}
                             </span>
-
                             <div class="h-100 d-flex align-items-center img-wrapper">
                                 <img :src="'./assets/img/' + step.img" :alt="'step' + (index + 1)">
                             </div>
@@ -223,13 +223,17 @@
                                     </ul>
                                 </div>
                                 <!-- s-img -->
-                                <div class="  flex-1 d-flex imgs">
-                                    <div v-for="(subImg, j) in list.content.subImgs" :key="j" class="s-img">
-                                        <div class="w-100">
-                                            <img v-bind:src="'./assets/img/' + subImg"
-                                                v-bind:alt="'小圖' + (i + 1) + '-' + (j + 1)">
+                                <div class="flex-1 d-flex flex-column imgs">
+                                    <div class="d-flex">
+                                        <div v-for="(subImg, j) in list.content.subImgs" :key="j" class="s-img">
+                                            <div class="w-100">
+                                                <img v-bind:src="'./assets/img/' + subImg"
+                                                    v-bind:alt="'小圖' + (i + 1) + '-' + (j + 1)">
+                                            </div>
                                         </div>
                                     </div>
+                                    <span v-if="showListIndex === 12" class="text-gray">中間圖勘誤："膳食纖維 0.8毫克 4毫克"，應為"膳食纖維
+                                        0.8公克 4公克"，特此更正！</span>
                                 </div>
                             </div>
                         </div>
@@ -284,12 +288,16 @@
                                                     </ul>
                                                 </div>
                                                 <!-- s-img -->
-                                                <div class="d-flex justify-content-center w-100 imgs">
-                                                    <div v-for="(subImg, j) in showList.content.subImgs" :key="j"
-                                                        class="s-img">
-                                                        <img class="img-list" v-bind:src="'./assets/img/' + subImg"
-                                                            v-bind:alt="'小圖-' + (j + 1)">
+                                                <div class="d-flex justify-content-center align-items-center flex-column w-100 imgs">
+                                                    <div class="d-flex">
+                                                        <div v-for="(subImg, j) in showList.content.subImgs" :key="j"
+                                                            class="s-img">
+                                                            <img class="img-list" v-bind:src="'./assets/img/' + subImg"
+                                                                v-bind:alt="'小圖-' + (j + 1)">
+                                                        </div>
                                                     </div>
+                                                    <span v-if="showListIndex === 12" class="text-gray">中間圖勘誤："膳食纖維
+                                                        0.8毫克 4毫克"，應為"膳食纖維 0.8公克 4公克"，特此更正！</span>
                                                 </div>
                                             </div>
                                         </div>

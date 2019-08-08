@@ -1,6 +1,9 @@
+
 function jump(anchor) {
+    
     var aTag = $(anchor);
-    $('html').animate({ scrollTop: aTag.offset().top }, '300');
+    console.log(aTag);
+    $('html,body').animate({ scrollTop: aTag.offset().top }, '300');
 }
 
 var app = new Vue({
@@ -283,16 +286,16 @@ var app = new Vue({
                     },
                 ],
             },
-            {
-                text: '講糖小學堂</br>核心概念',
-                datas: [
-                    // {
-                    //     link: '',
-                    //     image: '',
-                    //     about: '',
-                    // },
-                ],
-            },
+            // {
+            //     text: '講糖小學堂</br>核心概念',
+            //     datas: [
+            //         {
+            //             link: '',
+            //             image: '',
+            //             about: '',
+            //         },
+            //     ],
+            // },
             {
                 text: '講糖小學堂</br>使用經驗分享',
                 datas: [

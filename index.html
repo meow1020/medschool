@@ -27,8 +27,8 @@
                 </div>
             </div>
             <!-- video -->
-            <div id="video" class="d-flex flex-grow-1 flex-column">
-                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+            <div id="video" class="d-flex flex-column flex-1">
+                <div class="d-flex justify-content-center align-items-center video-text1 flex-1">
                     <h2 class="text-gray">全方面衛教工具 翻轉醫患溝通模式</h2>
                 </div>
                 <div class="d-flex justify-content-center position-relative video-wrapper" v-if="isUnder768">
@@ -40,20 +40,20 @@
                     <img class="w-100 video" src="./assets/img/video.gif" alt="video">
                     <img class="video-circle" src="./assets/img/video-bg.svg" alt="背景">
                 </div>
-                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                <div class="d-flex justify-content-center align-items-center video-text2 flex-1">
                     <h3 class="text-gray">以深入淺出圖解糖尿病衛教知識，各大主題搭配糖友 <br>
                         常見迷思問答，新手糖友也能輕易搞懂糖尿病！
                     </h3>
                 </div>
                 <!-- feedback button -->
                 <a href="./feedback.html" class="container yellow-button-ct position-relative d-flex justify-content-center ">
-                    <img class="yellow-button" src="./assets/img/yellow button.svg" alt="好禮回饋頁面">
+                    <img class="yellow-button" src="./assets/img/yellow-button.svg" alt="好禮回饋頁面">
                 </a>
             </div>
             <!-- 連結 -->
             <div id="links">
                 <div class="d-flex justify-content-center align-items-center h-100">
-                    <button class="link" onclick="jump('#section2')">
+                    <button class="link justify-content-center" onclick="jump('#section2')">
                         <div class="d-flex align-items-center">
                             <img src="./assets/img/link1.svg" alt="使用說明">
                             <div class="d-flex flex-column text-center text-white ">
@@ -63,8 +63,8 @@
                         </div>
                     </button>
                     <div class="line-separator bg-white"></div>
-                    <button class="link" onclick="jump('#section3')">
-                        <div class="d-flex align-items-center">
+                    <button class="link " onclick="jump('#section3')">
+                        <div class="d-flex align-items-center justify-content-center">
                             <img src="./assets/img/link2.svg" alt="主題介紹">
                             <div class="d-flex flex-column text-center text-white">
                                 <span>講糖小學堂</span>
@@ -74,7 +74,7 @@
                     </button>
                     <div class="line-separator bg-white"></div>
                     <button class="link" onclick="jump('#section4')">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center ">
                             <img src="./assets/img/link3.svg" alt="影音經驗分享">
                             <div class="d-flex flex-column text-center text-white">
                                 <span>講糖小學堂</span>
@@ -113,10 +113,10 @@
                 <h3 class="text-gray">看看別人實地怎麼做，讓您的衛教工作更輕鬆，糖友吸收更快更落實。</h3>
             </div>
             <!-- 使用說明 767.98-->
-            <div v-if="isUnder768" class="bg-blue flex-grow-1 ">
+            <div v-if="isUnder768" class="bg-blue   flex-1 ">
                 <div class="steps container d-flex flex-column h-100">
                     <div v-for="(step, index) in steps"
-                        class="step d-flex flex-column align-items-center justify-content-center flex-grow-1">
+                        class="step d-flex flex-column align-items-center justify-content-center   flex-1">
                         <div class="step-img d-flex align-items-center h-100">
                             <span class="text-center">
                                 Step<br>{{ index + 1 }}
@@ -132,10 +132,10 @@
                 </div>
             </div>
             <!-- 使用說明 -->
-            <div v-else class="bg-blue flex-grow-1 ">
+            <div v-else class="bg-blue   flex-1 ">
                 <div class="steps container d-flex flex-column h-100">
                     <div v-for="(step, index) in steps"
-                        class="step d-flex align-items-center justify-content-center flex-grow-1"
+                        class="step d-flex align-items-center justify-content-center   flex-1"
                         :class="((index +1) %2 === 1) ? 'flex-row' : 'flex-row-reverse'">
 
                         <div class="step-img d-flex align-items-center h-100"
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <div v-if="isUnder1024" class="flex-grow-1">
+            <div v-if="isUnder1024" class="  flex-1">
                 <!-- 1024 theme2 -->
                 <div class="container">
                     <div class="grid-container h-100">
@@ -186,12 +186,12 @@
             </div>
 
             <!-- 下方theme1 -->
-            <div v-else class="theme1 flex-grow-1">
+            <div v-else class="theme1   flex-1">
                 <div class="container h-100 d-flex">
                     <!-- left list -->
                     <div class="list text-gray">
                         <ol class="d-flex flex-column h-100">
-                            <li v-for="(list, index) in lists" class="flex-grow-1 d-flex align-items-center">
+                            <li v-for="(list, index) in lists" class="  flex-1 d-flex align-items-center">
                                 <div class="list-item" v-bind:class="{ selected: showListIndex === index }"
                                     @mouseover="showListIndex = index">
                                     <span>{{ list.text }}</span>
@@ -201,21 +201,21 @@
                     </div>
                     <!-- right content -->
                     <section v-for="(list, i) in lists" :key="i" v-if="i === showListIndex"
-                        class="d-flex flex-column justify-content-around align-content-center h-100 flex-grow-1">
+                        class="d-flex flex-column justify-content-around align-content-center h-100 flex-1">
                         <!-- theme title -->
                         <div class="theme-title d-flex justify-content-center">
                             <span>{{ list.content.title }}</span>
                         </div>
-                        <div class="flex-grow-1 img-club d-flex">
-                            <div class="b-img-wrapper h-100 flex-grow-1 d-flex align-content-center">
+                        <div class="flex-1 img-club d-flex">
+                            <div class="b-img-wrapper h-100 flex-1 d-flex align-content-center bb-img">
                                 <!-- b-img -->
                                 <img class="b-img" v-bind:src="'./assets/img/' + list.content.mainImg"
                                     alt="'大圖'+ (i + 1)">
                             </div>
                             <!-- listPoint + s-img -->
-                            <div class="right-side flex-grow-2 d-flex flex-column justify-content-center">
+                            <div class="right-side   flex-2 d-flex flex-column justify-content-center">
                                 <!-- listPoint -->
-                                <div class="d-flex align-items-center list-circle flex-grow-1">
+                                <div class="d-flex align-items-center list-circle   flex-1">
                                     <ul>
                                         <li v-for="listPoint in list.content.listPoints" class="list-point text-gray">
                                             {{ listPoint }}
@@ -223,7 +223,7 @@
                                     </ul>
                                 </div>
                                 <!-- s-img -->
-                                <div class="flex-grow-1 d-flex imgs">
+                                <div class="  flex-1 d-flex imgs">
                                     <div v-for="(subImg, j) in list.content.subImgs" :key="j" class="s-img">
                                         <div class="w-100">
                                             <img v-bind:src="'./assets/img/' + subImg"
@@ -261,7 +261,7 @@
                                         <span>{{ showList.content.title }}</span>
                                     </div>
                                     <!-- Modal 內容 -->
-                                    <section class="d-flex" :class="{ 'flex-grow-1': !isUnder768 }">
+                                    <section class="d-flex" :class="{ '  flex-1': !isUnder768 }">
                                         <div class="modal-list-content d-flex w-100">
                                             <div class="img-wrapper">
                                                 <div class="d-flex justify-content-center align-items-center h-100">
@@ -272,7 +272,7 @@
                                             </div>
                                             <!-- listPoint + s-img -->
                                             <div class="modal-list-content__right d-flex flex-column justify-content-center"
-                                                :class="{ 'flex-grow-1': !isUnder768 }">
+                                                :class="{ '  flex-1': !isUnder768 }">
                                                 <!-- listPoint -->
                                                 <div
                                                     class="d-flex justify-content-center align-items-center list-circle">
@@ -305,7 +305,7 @@
 
         <!-- section4 -->
         <section id="section4" class="d-flex flex-column">
-            <div class="container d-flex flex-column flex-grow-1">
+            <div class="container d-flex flex-column   flex-1">
                 <!-- 標題 -->
                 <div class="title1 d-flex flex-column">
                     <h1>講糖小學堂</h1>
@@ -317,7 +317,7 @@
                     <!-- left list -->
                     <div class="list text-gray ">
                         <ol class="d-flex flex-column ">
-                            <li v-for="(list2, index) in list2s" class="flex-grow-1 d-flex align-items-center">
+                            <li v-for="(list2, index) in list2s" class="  flex-1 d-flex align-items-center">
                                 <div class="list-item" v-bind:class="{ selected: showList2Index === index }"
                                     @mouseover="showList2Index = index">
                                     <span v-html="list2.text"></span>
@@ -327,7 +327,7 @@
                     </div>
                     <!-- right video -->
                     <div v-for="(list2, j) in list2s" :key="j" v-if="j === showList2Index"
-                        class="video-title1 d-flex flex-column justify-content-center align-items-center flex-grow-1 ">
+                        class="video-title1 d-flex flex-column justify-content-center align-items-center   flex-1 ">
                         <!-- 影片標題 -->
                         <span v-html="list2.text" class="text-center"></span>
                         <!-- <div class="list-item" v-bind:class="{ selected: showList2Index === index }"
@@ -348,9 +348,9 @@
                 </div>
 
                 <!-- 1024 下方影片 -->
-                <div v-else class="flex-grow-1 h-100">
+                <div v-else class="  flex-1 h-100">
                     <!-- video list -->
-                    <div class="grid-container d-flex  flex-column align-items-center">
+                    <div class="grid-container d-flex  flex-column align-items-center flex-1">
                         <div v-for="(list2, index) in list2s"
                             class="grid-item bg-blue text-gray d-flex  justify-content-center align-items-center"
                             @click="showModal2(index)">

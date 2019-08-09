@@ -82,7 +82,7 @@
 #section1 h3 {
     font-size: 1.5rem;
     margin: 1rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 #section1 .video-circle {
@@ -93,10 +93,13 @@
     z-index: -1;
 }
 
+#section1 .video-wrapper {
+    height: 100%;
+}
+
 #section1 .video {
     object-fit: contain;
-    position: relative;
-    flex-grow: 1;
+    max-height: 100%;
 }
 
 #section1 .video-text1 {
@@ -144,10 +147,11 @@
 }
 
 #section1 #about {
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 1.25rem;
     line-height: 1.5rem;
     margin: 1rem 0;
+    color: black;
 }
 
 .title1 {
@@ -298,16 +302,16 @@
 
 #section3 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     padding: 2rem
 
 }
 #section3 .grid-item {
-    padding: 20px;
+    padding: 0.5rem;
     font-size: 2rem;
-    height: 120px;
+    height: 15rem;
     cursor: pointer;
 }
 
@@ -414,8 +418,8 @@
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     padding: 2rem
-
 }
+
 #section4 .grid-item {
     padding: 20px;
     font-size: 2rem;

@@ -229,7 +229,7 @@
     }
 
     #section3 .grid-container {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     #section2 p {
@@ -294,6 +294,8 @@
         cursor: pointer;
         margin: 1rem;
     }
+
+    
 
     #section4 .modal-video-img img {
         width: 30rem;

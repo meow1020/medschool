@@ -66,6 +66,7 @@
     }
 
     #about h2 {
+        font-size: 2.5rem;
         margin: 0rem 1rem 1rem 1rem;
     }
 
@@ -75,8 +76,8 @@
 
     .button button {
         width: 16rem;
-        height: 6rem;
-        font-size: 1.75rem;
+        height: 8rem;
+        font-size: 2rem;
         margin: 0.25rem 0.25rem 0rem 0.25rem;
     }
 
@@ -88,8 +89,8 @@
     }
 
     .bottom-content .content-text {
-        font-size: 1.75rem;
-        padding: 0 0 0 1.75rem;
+        font-size: 2.25rem;
+        padding: 0 0 0 3.25rem;
     }
 
     .bottom-content .line {

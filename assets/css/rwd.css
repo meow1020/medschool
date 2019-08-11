@@ -30,10 +30,6 @@
         margin: 0;
     }
 
-    /* #section3 {
-        height: 100vh;
-    } */
-
     .list-circle {
         padding-left: 50px;
     }
@@ -317,13 +313,13 @@
 
 }
 
-@media screen and (min-width: 1025px) {
+/* @media screen and (min-width: 1025px) {
     #section3 {
         height: 100vh;
     }
-}
+} */
 
-@media screen and (min-width: 330px) and (max-width: 767.98px) {
+@media screen and (min-width: 330px) and (max-width: 768px) {
     #section4 {
         height: 100vh;
     }

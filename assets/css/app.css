@@ -75,13 +75,13 @@
 #section1 h2 {
     font-size: 2rem;
     font-weight: normal;
-    margin: 1rem;
+    margin: 0.5rem;
   
 }
 
 #section1 h3 {
-    font-size: 1.5rem;
-    margin: 1rem;
+    font-size: 1.2rem;
+    margin: 0.5rem;
     font-weight: bold;
 }
 
@@ -112,11 +112,11 @@
 }
 
 #section1 .video-text1 {
-    min-height: 4rem;
+    min-height: 3rem;
 }
 
 #section1 .video-text2 {
-    min-height: 7rem;
+    min-height: 3rem;
 }
 
 #section1 #links {
@@ -131,7 +131,7 @@
 }
 
 #section1 .link span {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     min-width: 12rem;
 }
 

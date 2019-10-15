@@ -32,20 +32,59 @@
                     <h2 class="text-gray">全方面衛教工具 翻轉醫患溝通模式</h2>
                 </div>
                 <div class="video-wrapper d-flex flex-1 h-100 justify-content-center flex-1">
-                        <!-- <img src="./assets/img/video.png" alt="video"> -->
+                    <!-- <img src="./assets/img/video.png" alt="video"> -->
                 </div>
                 <!-- 1024 yellow-button-->
                 <div class="d-flex justify-content-center align-items-center video-text2">
                     <h3 class="text-gray">以深入淺出圖解糖尿病衛教知識，各大主題搭配糖友常見迷思問答，新手糖友也能輕易搞懂糖尿病！
                     </h3>
                     <!-- feedback button -->
-                    <a href="./feedback.html" class="yellow-button-ct">
+                    <!-- <a href="./feedback.html" class="yellow-button-ct">
                         <img class="yellow-button" src="./assets/img/yellow-button.svg" alt="好禮回饋頁面">
-                    </a>
+                    </a> -->
+                </div>
+            </div>
+            <!-- link_phone -->
+            <div v-if="isUnder768" id="links">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                        <button class="link d-flex flex-column justify-content-center align-items-center "
+                            onclick="jump('#section2')">
+                            <img src="./assets/img/link1.svg" alt="使用說明">
+                            <div class="d-flex flex-column text-center text-white ">
+                                <span>講糖小學堂</span>
+                                <span>使用說明</span>
+                            </div>
+                        </button>
+                        <div class="line-separator bg-white"></div>
+                        <button class="link d-flex flex-column justify-content-center align-items-center"
+                            onclick="jump('#section3')">
+                            <img src="./assets/img/link2.svg" alt="主題介紹">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>講糖小學堂</span>
+                                <span>主題介紹</span>
+                            </div>
+                        </button>
+                        <div class="line-separator bg-white"></div>
+                        <button class="link d-flex flex-column justify-content-center align-items-center"
+                            onclick="jump('#section4')">
+                            <img src="./assets/img/link3.svg" alt="影音經驗分享">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>講糖小學堂</span>
+                                <span>影音經驗分享</span>
+                            </div>
+                        </button>
+                        <div class="line-separator bg-white"></div>
+                        <button class="link d-flex flex-column justify-content-center align-items-center" 
+                            onclick="jump()">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>意見回饋</span>
+                                <span>線上填寫</span>
+                            </div>
+                        </button>
                 </div>
             </div>
             <!-- 連結 -->
-            <div id="links">
+            <div v-else id="links">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <button class="link justify-content-center" onclick="jump('#section2')">
                         <div class="d-flex align-items-center">
@@ -76,11 +115,18 @@
                             </div>
                         </div>
                     </button>
-
+                    <div class="line-separator bg-white"></div>
+                    <button class="link" onclick="jump()">
+                        <div class="d-flex align-items-center ">
+                            <div class="d-flex flex-column text-center text-white">
+                                <span>意見回饋</span>
+                                <span>線上填寫</span>
+                            </div>
+                        </div>
+                    </button>
                 </div>
-
-
             </div>
+
             <!-- 公司介紹 -->
             <div id="about">
                 <div class="d-flex justify-content-center">
@@ -281,7 +327,8 @@
                                                     </ul>
                                                 </div>
                                                 <!-- s-img -->
-                                                <div class="d-flex justify-content-center align-items-center flex-column w-100 imgs">
+                                                <div
+                                                    class="d-flex justify-content-center align-items-center flex-column w-100 imgs">
                                                     <div class="d-flex justify-content-center">
                                                         <div v-for="(subImg, j) in showList.content.subImgs" :key="j"
                                                             class="s-img">

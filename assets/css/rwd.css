@@ -198,7 +198,7 @@
     }
     #section1 .link{
         padding: 0;
-        height: 5rem;
+        height: 8rem;
     }
 
     #section1 .link span {
@@ -215,7 +215,7 @@
     .line-separator {
         width: 1px;
         height: 6rem;
-        margin: 1rem 0.75rem 1rem 0.75rem;
+        margin: 1rem 1.75rem 1rem 1.75rem;
     }
 
     #section1 #about {
